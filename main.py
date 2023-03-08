@@ -74,8 +74,7 @@ def roots(d_z, c):
             pdiffz = s_pdiff[tx][i] + pdiffz * sz
 
         # Evaluate p(z)/p'(z) at each z
-        # Note: p(z) will have at most relative error of 4n^2*mu+O(n*mu) where mu=2^-23 (for single precision). 
-        # Shouldn't be too significant at n<30 but double precision would be nice.
+        # Note: p(z) will have at most relative error of 4n^2*mu+O(n*mu) where mu=2^-53 (for double precision). 
         ratio = pz / pdiffz
         s_threads[0] = chunks * n
         cuda.syncthreads()
