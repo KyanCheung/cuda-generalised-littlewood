@@ -2,6 +2,4 @@ This project was heavily inspired by [a blog post by John Baez](https://johncarl
 
 I stumbled upon the diagram that he made, and decided to try and optimise the creation process. As finding a single polynomial's roots is computationally inexpensive, one can easily have a GPU calculate the roots of thousands of polynomials, at the same time, in milliseconds. As a result, I wrote a program using Numba and pyCUDA to heavily parallelise the root-finding workload, reducing the time to find the roots down to around 40 seconds.
 
-I also decided to extend the idea of Littlewood polynomials to *Generalised Littlewood Polynomials*, monic polynomials whose coefficients are in the set $\{a, 1\}$ for some parameter $a$. This program is able to generate similar diagrams for Generalised Littlewood polynomials, by varying the parameter `a`. By doing so, I hope to better understand the properties of the roots of the Generalised Littlewood Polynomials.
-
-
+I also decided to extend the idea of Littlewood polynomials to *Generalised Littlewood Polynomials*, monic polynomials whose coefficients are either $a$ for some parameter $a$, or $1$. This program is able to generate similar diagrams for Generalised Littlewood polynomials, by varying the parameter `a`. By doing so, I hope to better understand the properties of the roots of the Generalised Littlewood Polynomials.
